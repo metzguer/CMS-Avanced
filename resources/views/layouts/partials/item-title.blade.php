@@ -1,3 +1,3 @@
-<a class="navbar-brand" href="{{ url('/') }}">
+<a class="navbar-brand  text-white" href="{{ url('/') }}">
   CMS Avanced
 </a>
