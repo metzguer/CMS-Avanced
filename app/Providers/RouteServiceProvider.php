@@ -51,10 +51,18 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+
+        // Backedn routes
+        Route::middleware('web')
+             ->prefix ("admin")
+             ->namespace('App\Http\Controllers\Backend')
+             ->group(base_path('routes/bckend.php'));
+        // Fronted routes
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
     }
+
 
     /**
      * Define the "api" routes for the application.

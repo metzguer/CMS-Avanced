@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             "email"=>"master@master.com",
             "password"=>bcrypt("master06")
         ]);
-        factory(App\User::class, 7);
+        factory(App\User::class, 7)->create();
         App\Page::Create([
         	"parent_id"=>null,
         	"title"=>"Quienes somos",

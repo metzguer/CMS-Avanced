@@ -11,8 +11,10 @@
 |
 */
 
-Route::get("/", "Backend\PagesController@index");
+
+// Routes Fronted  public
+Route::get("/", "PageController@index");
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
