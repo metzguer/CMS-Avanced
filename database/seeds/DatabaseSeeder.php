@@ -11,6 +11,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        App\User::Create([
+            "name"=>"Master",
+            "email"=>"master@master.com",
+            "password"=>bcrypt("master06")
+        ]);
+        factory(App\User::class, 7);
+        App\Page::Create([
+        	"parent_id"=>null,
+        	"title"=>"Quienes somos",
+        	"slug"=>"quienes-somos",
+        	"body"=>"body"
+
+        ]);
+
+        App\Page::Create([
+        	"parent_id"=>1,
+        	"title"=>"Mision",
+        	"slug"=>"mision",
+        	"body"=>"body"
+
+        ]);
+
+        App\Page::Create([
+        	"parent_id"=>1,
+        	"title"=>"Vision",
+        	"slug"=>"vision",
+        	"body"=>"body"
+
+        ]);
     }
 }
