@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/admin/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
