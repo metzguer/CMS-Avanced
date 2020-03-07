@@ -20,7 +20,7 @@ Route::get("/mision", "PageController@mision")->name("mision");
 Route::get("/vision", "PageController@vision")->name("vision");
 Route::get("/contacto", "PageController@contacto")->name("contacto");
 
-Route::get("/blog", "PageController@blog")->name("blog");
+Route::get("/blog", "BlogController@index")->name("blog");
 
 Route::get('/home', function(){
 
