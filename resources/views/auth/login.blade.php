@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section("title", "Login")
+
+@section("nav-login")
+@include("layouts.nav2")
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

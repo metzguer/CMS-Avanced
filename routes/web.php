@@ -13,7 +13,19 @@
 
 
 // Routes Fronted  public
-Route::get("/", "PageController@index");
+Route::get("/", "PageController@index")->name("home");
+
+Route::get("/quienes-somos", "PageController@nosotros")->name("quienes-somos");
+Route::get("/mision", "PageController@mision")->name("mision");
+Route::get("/vision", "PageController@vision")->name("vision");
+Route::get("/contacto", "PageController@contacto")->name("contacto");
+
+Route::get("/blog", "PageController@blog")->name("blog");
+
+Route::get('/home', function(){
+
+	return redirect()->route("dashboard");
+});
 
 Auth::routes();
 

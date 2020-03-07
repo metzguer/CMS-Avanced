@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield("title")</title>
+    <title>{{ config('app.name', 'CMS') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,15 +21,12 @@
 </head>
 <body>
     <div id="app">
-        <section>
-           @yield("nav-login")
-        </section>
-     
-       <section>
-           @yield("nav-backend")
-       </section>
 
-        
+    
+           @include("frontend.layout.nav-frontend")
+
+           @yield("slider")
+
         <main class="py-4">
             @yield('content')
         </main>
