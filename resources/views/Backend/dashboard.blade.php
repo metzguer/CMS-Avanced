@@ -30,7 +30,7 @@
                     <ul class="list-group list-group-flush">
                         @foreach($users as $user)
                         <li class="list-group-item ">{{$user->name}}<br/>
-                        <span class="float-right font-italic text-muted">Last session: -- </span>
+                        <span class="float-right font-italic text-muted">Ultima sesión: {{$date}} </span>
                         </li>
                         @endforeach
                     </ul>

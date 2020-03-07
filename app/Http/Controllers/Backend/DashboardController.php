@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\User;
 
 class DashboardController extends Controller
 {
-	public function __construct()
-    {
-        $this->middleware('auth');
-    }
+	
 
-    public function index()
+    public function index(User $user)
     {
     	$title = "Usuarios";
-    	$users = User::all();
-    	return view("Backend/dashboard", compact("users", "title"));
+    	$users = $user->take(5)->get();
+    	$date = date("d-m-Y");
+    	return view("Backend/dashboard", compact("users", "title", "date"));
     }
 }
